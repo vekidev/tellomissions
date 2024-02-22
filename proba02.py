@@ -2,15 +2,15 @@ import djitellopy, time, threading
 
 from testtello import TestTello
 
-# dron = djitellopy.Tello()
-dron = TestTello() 
+dron = djitellopy.Tello()
+# dron = TestTello() 
 dron.connect() 
 
 distance = 50
 
-# dron.takeoff()
-threading.Thread(target=dron.update).start()
-# time.sleep(3)
+dron.takeoff()
+# threading.Thread(target=dron.update).start()
+time.sleep(3)
 
 dron.update()
 
